@@ -1,0 +1,58 @@
+#header-text {
+  padding-bottom:100px;
+}
+
+#circleOne {
+  color: #357df1;
+}
+
+#circleTwo {
+  color: #357df1;
+}
+
+#circleThree {
+  color: #357df1;
+}
+
+.navbar-style {
+  background-color: #091a3a;
+  padding-right: 25px;
+  font-size; 2em;
+}
+
+.card-container.card {
+    width: 450px;
+    padding: 40px 40px;
+}
+
+.card {
+    background-color: #fff;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.centerh {
+  text-align: center;
+}
+
+.profile-description {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}
+
+.profile-picture {
+  display: inline-block;
+}
+
+.check {
+  background-image: url("images/check.png");
+}

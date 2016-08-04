@@ -1,0 +1,29 @@
+<% layout('layout') -%>
+
+<div class="container">
+  <div class="card card-container">
+
+    <% if (message.length > 0) { %>
+      <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismmiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <%= message %>
+      </div>
+    <% } %>
+
+    <form method="post">
+
+      <h1> Login </h1>
+      <div class="form-group">
+        <input type="email" placeholder="Your Email *" class="form-control" name="email">
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Your Password *" class="form-control" name="password">
+      </div>
+
+      <button type="submit" class="btn btn-xl btn-smaller">Submit</button>
+
+    </form>
+  </div>
+</div>

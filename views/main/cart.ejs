@@ -1,0 +1,65 @@
+<% layout('layout') -%>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+
+      <% if (message.length > 0) { %>
+        <div class="alert alert-success alert-dismissible">
+          <button type="button" class="close" data-dismmiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <%= message %>
+        </div>
+        <% } %>
+
+
+        <% for (var i = 0; i < foundCart.items.length; i++) { %>
+          <div class="list-group">
+            <span class="list-group-item">
+              <div class="row">
+                <div class="col-md-3">
+                  <span><img class="product-image" src="<%= foundCart.items[i].item.image %>" style="width:304px;height:228px;"></span>
+                </div>
+
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-3">
+                    <p class="cart"><strong>Product:</strong>&nbsp;<%= foundCart.items[i].item.name %></p>
+                    <p class="cart"><strong>Quantity:</strong>&nbsp;<%= foundCart.items[i].quantity %></p>
+                    <p class="cart"><strong>Price:</strong>&nbsp;<%= foundCart.items[i].price %></p>
+                
+                  <form method="post" action="/remove">
+                    <input type="hidden" name="item" value="<%= foundCart.items[i]._id %>">
+                    <input type="hidden" name="price" value="<%= foundCart.items[i].price %>">
+                    <button class="btn btn-xl btn-smaller" type="submit" type="button">Remove</button>
+                  </form>
+                </div>
+
+              </div>
+            </span>
+          </div>
+
+          <% } %>
+
+
+        </div>
+
+        <div class="col-md-3"></div>
+
+        <div class="col-md-3">
+          <div class="list-group">
+            <span class="list-group-item">
+              <h4>Total: $<span class="totalPrice"><%= foundCart.total %></span></h4>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-2 col-md-offset-6">
+          <div class="text-center" id="loading"></div>
+      </div>
+
+    </div>
